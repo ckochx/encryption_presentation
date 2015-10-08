@@ -110,9 +110,14 @@
     </div>
 
     <div class="step slide" data-x="0" data-y="-1500">
-        <h1>Issues to Discuss:</h1>
-        <q>How to securely share a secret between 2 people in public</q>
-        <q>How to get to a post-password world</q>
+        <q>Issues to Discuss:</q>
+        <h2>RSA (prime number factorization) encryption</h2>
+        <br />
+        <h2>Elliptic Curve Cryptology</h2>
+        <br />
+        <h2>How to securely share a secret between 2 people in public</h2>
+        <br />
+        <h2>How to get to a post-password world</h2>
     </div>
 
 <!--     <div class="step slide" data-x="1000" data-y="-1500">
@@ -121,9 +126,31 @@
  -->
 
     <div class="step" data-x="0" data-y="0" data-scale="1">
-      <h1>RSA Asymetric (Public-Private Key Cryptography)</h1>
+      <q>RSA Asymetric (Public-Private Key Cryptography)</q>
       <p>RSA stands for Ron Rivest, Adi Shamir and Leonard Adleman, who first publicly described it in 1978.<sup>1</sup></p>
       <span class="footnote" style="font-size: large"><sup>1</sup>ArsTechnica http://goo.gl/51AMdW</span>
+    </div>
+    <div class="step" data-x="0" data-y="0" data-scale="2">
+      <q>RSA Asymetric (Public-Private Key Cryptography)</q>
+      <p>RSA derives its security from the difficulty of factoring large integers that are the product of two large prime numbers.</p>
+    </div>
+    <div class="step" data-x="0" data-y="0" data-scale="3">
+      <p><span style="font-size: x-large">Two large prime numbers, p and q, are generated.</span></p>
+      <p><span style="font-size: x-large">A modulus n is calculated by multiplying p and q. This number is used by both the public and private k</eys and provides the link between them.</p>
+      <p><span style="font-size: x-large">The public key consists of the modulus n, and a public exponent, e.</span></p>
+      <p><span style="font-size: x-large">The e figure is normally set at 65537 and doesn't have to be a secretly selected prime number</span></p>
+      <p><span style="font-size: x-large">The private key consists of the modulus n and the private exponent d</span></p>
+      <p><span style="font-size: x-large">The private is calculated using the Extended Euclidean algorithm to find the multiplicative inverse with respect to the totient of n.<sup>9</sup></p>
+      <span class="footnote" style="font-size: large"><sup>9</sup>SearchSecurity http://goo.gl/tCt1rM</span>
+    </div>
+    <div class="step" data-x="0" data-y="0" data-scale="4">
+      <p><span style="font-size: x-large">The security of RSA relies on the computational difficulty of factoring large integers.</span></p>
+      <p><span style="font-size: x-large">Minimum recommended key length is 2048 bits.</span></p>
+    </div>
+
+    <div class="step" data-x="0" data-y="0" data-scale="5">
+      <h1>Diffe Hellman Public Key Exchange</h1>
+      <p>An application of the RSA Algorithm</p>
     </div>
     <div class="step" data-x="0" data-y="0" data-scale="1">
       <span class="try">Alice &amp; Bob publically agree to a prime modulus and a generator.<sup>2,3</sup></span>
@@ -215,7 +242,12 @@
       </ul>
       <p><span class="footnote" style="font-size: large"><sup>6</sup>CIPP Guide https://goo.gl/rTmFQd</span></p>
     </div>
-
+    <div id="" class="step" data-x="2000" data-y="3000" data-rotate-x="0"  data-rotate-y="0" data-scale="10">
+      <p>Quantum Cryptology:</p>
+      <p>Uses current cryptology techniques.</p>
+      <p>Ensures the a message is transmitted without being observed</p>
+      <p>Allows the secure public exchange of crypto-keys</p>
+    </div>
 
 
     <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="0" data-scale="6">
@@ -225,16 +257,10 @@
     <!-- <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1"> -->
     <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="90" data-scale="6">
       <p>SSH everywhere to disable passwords for server login.</p>
-      <p>An asymmetric key based login system to centrally manage user-access to servers.</p>
-      <p></p>
+      <p>An asymmetric key based login system to centrally manage user-access to servers. (Bastion Server)</p>
+      <p>KeePass password vault server to centrally manage service passwords.</p>
     </div>
     <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="0" data-scale="6">
-      <p>Other interesting concepts:</p>
-      <p><span style= "font-size: x-large">BCrypt (blowfish cipher) Key Derivation Function</span></p>
-      <p><span style= "font-size: x-large">SCrypt Password-Based Key Derivation Functions (PBKDF)</span></p>
-      <p><span style= "font-size: x-large"></span></p>
-    </div>
-    <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="90" data-scale="6">
       <img src="images/SQRL_Logo_80x80.png" style ="float:right;">
       <p>Aspirational: SQRL (Secure Quick Reliable Login)<sup>7</sup></p>
       <p><span style= "font-size: x-large">Out-of-band user authentication (using QR codes)</span></p>
@@ -244,59 +270,11 @@
       <p><span class="footnote" style="font-size: large"><sup>8</sup>GRC https://goo.gl/2R7UgR</span>
       <span class="footnote" style="font-size: medium">Uses Dr. Daniel J. Bernstein's (DJB) twisted Edward's curve digital signature algorithm (EdDSA). In published papers, DJB, explains the detailed derivation and properties of his “25519” elliptic curve.</p>
     </div>
-
-    <!--
-
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
-
-        And the last one shows full power and flexibility of impress.js.
-
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+    <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="90" data-scale="6">
+      <p>Other interesting concepts:</p>
+      <p><span style= "font-size: x-large">BCrypt (blowfish cipher) Key Derivation Function</span></p>
+      <p><span style= "font-size: x-large">SCrypt Password-Based Key Derivation Functions (PBKDF)</span></p>
+      <p><span style= "font-size: x-large"></span></p>
     </div>
 
     <!--
@@ -314,7 +292,7 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
 
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="13">
     </div>
 
 </div>
