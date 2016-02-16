@@ -1,1 +1,1 @@
-<?php include_once("password_suck.html"); ?>
+<?php include_once("passwords_suck.html"); ?>
