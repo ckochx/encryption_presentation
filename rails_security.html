@@ -127,8 +127,7 @@
 
     <div class="step" data-x="0" data-y="0" data-scale="1">
       <q>Sessions</q>
-      <p>Sessions provide persistence to a rails user<sup>1</sup></p>
-      <span class="footnote" style="font-size: large"><sup>1</sup>ArsTechnica http://goo.gl/51AMdW</span>
+      <p>Sessions provide persistence to a rails user</p>
     </div>
     <div class="step" data-x="0" data-y="0" data-scale="2">
       <q>A session_id hashes some user information along with the current date and time as well as a random value.</q>
@@ -137,11 +136,6 @@
     <div class="step" data-x="0" data-y="0" data-scale="3">
       <p><span style="font-size: x-large">Stored on the client (in plain text that is Base64-encoded)</span></p>
       <p><span style="font-size: x-large">Vulnerable to compromise from outside threats (Session Hijacking)</span></p>
-      <p><span style="font-size: x-large"></span></p>
-      <p><span style="font-size: x-large">The e figure is normally set at 65537 and doesn't have to be a secretly selected prime number</span></p>
-      <p><span style="font-size: x-large">The private key consists of the modulus n and the private exponent d</span></p>
-      <p><span style="font-size: x-large">The private is calculated using the Extended Euclidean algorithm to find the multiplicative inverse with respect to the totient of n.<sup>9</sup></p>
-      <span class="footnote" style="font-size: large"><sup>9</sup>SearchSecurity http://goo.gl/tCt1rM</span>
     </div>
     <div class="step" data-x="0" data-y="0" data-scale="4">
     <q>Mitigations:</q>
@@ -193,7 +187,6 @@
       <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em; font-family: monospace; font-size: large;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">raw<br>html_safe<br>content_tag
       </span>
       </pre></div>
-
 
       <q>Cross-site Request Forgery (CSRF)</q>
       <p><span style="font-size: x-large"></span></p>
@@ -247,9 +240,9 @@
     </div>
     <div id="" class="step" data-x="850" data-y="3000" data-rotate-x="90" data-rotate-y="0" data-scale="5">
       <h2>Implementation Weaknesses</h2>
+      <p><span style="font-size: x-large">Follow convention</span></p>
       <p><span style="font-size: x-large">Don't roll your own solutions</span></p>
       <p><span style="font-size: x-large">Follow best practices whenever possible</span></p>
-      <p><span style="font-size: x-large">Follow convention</span></p>
     </div>
     <div id="" class="step" data-x="850" data-y="3000" data-rotate-x="90" data-rotate-y="90" data-scale="5">
       <h2>Secure Password Management &amp; Recovery</h2>
@@ -264,82 +257,7 @@
       <p><span style="font-size: x-large">Prefer gems that are well-supported and actively developed.</span></p>
       <p><span style="font-size: x-large">Don't roll your own solution</span></p>
     </div>
-    <div id="" class="step" data-x="850" data-y="3000" data-rotate-x="90"  data-rotate-y="0" data-scale="5">
-      <h2>Elliptic Curve Cryptography</h2>
-      <img src="images/elliptic-curve-crypt-image01.gif">
-    </div>
-    <div id="" class="step" data-x="850" data-y="3000" data-rotate-x="90"  data-rotate-y="90" data-scale="5">
-      <p>Main Benefits:</p>
-      <ul>
-        <li><span style= "font-size: x-large">NP-Hard problem</span></li>
-        <li><span style= "font-size: x-large"><span style= "font-size: x-large">Small key sizes, great for mobile devices</span></li>
-        <li><span style= "font-size: x-large">Computationally lightwieght and easy to calculate keys</span></li>
-        <li><span style= "font-size: x-large">Deterministitc</span></li>
-        <li><span style= "font-size: x-large">Based on the Discrete Logarithm Problem (DLP)-- or the ease of calculating the next value of a curve over a finite field.<sup>5</sup></span></li>
-        <li><span style= "font-size: x-large">Extremely difficult (even moreso than RSA) to calculate backwards from public to private key.</span></li>
-      </ul>
-      <p><span class="footnote" style="font-size: large"><sup>5</sup>CIPP Guide https://goo.gl/rTmFQd</span></p>
 
-    </div>
-    <div id="" class="step" data-x="850" data-y="3000" data-rotate-x="90"  data-rotate-y="0" data-scale="5">
-      <p>Main Concerns:</p>
-      <ul>
-        <li><span style= "font-size: x-large">A 112-bit ECC key has been brute-force compromised. This was done by calculating all 2<sup>60</sup> possible key combinations.<sup>6</sup></span></li>
-        <li><span style= "font-size: x-large">Some implementations of ECC are promoted by NIST (National Institute of Standards and Technology) and are affiliated with the NSA. There is concern that the Dual Elliptic Curve Deterministic Random Bit Generator (Dual_EC_DRBG) may be compromised with a backdoor, or it may not be truly random.</span></li>
-        <li><span style= "font-size: x-large">Similar to RSA, at any point, an algorithm may be developed to shortcut and minimize the possible solution space.</span></li>
-      </ul>
-      <p><span class="footnote" style="font-size: large"><sup>6</sup>CIPP Guide https://goo.gl/rTmFQd</span></p>
-    </div>
-    <div id="" class="step" data-x="2000" data-y="3000" data-rotate-x="0"  data-rotate-y="0" data-scale="10">
-      <p>Quantum Cryptology:</p>
-      <p>Uses current cryptology techniques.</p>
-      <p>Ensures the a message is transmitted without being observed</p>
-      <p>Allows the secure public exchange of crypto-keys</p>
-    </div>
-
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="0" data-scale="6">
-      <p>How can this <b>work</b> for <span class="thoughts">NCSA?</span></p>
-    </div>
-
-    <!-- <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1"> -->
-    <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="90" data-scale="6">
-      <p>SSH everywhere to disable passwords for server login.</p>
-      <p>An asymmetric key based login system to centrally manage user-access to servers. (Bastion Server)</p>
-      <p>KeePass password vault server to centrally manage service passwords.</p>
-    </div>
-    <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="0" data-scale="6">
-      <img src="images/SQRL_Logo_80x80.png" style ="float:right;">
-      <p>Aspirational: SQRL (Secure Quick Reliable Login)<sup>7</sup></p>
-      <p><span style= "font-size: x-large">Out-of-band user authentication (using QR codes)</span></p>
-      <p><span style= "font-size: x-large">The SQRL protocol makes it easy for any user to authenticate with a public key. (Without needing to have a technical background)</span></p>
-      <p><span style= "font-size: x-large">Based on ECC, but using a flavor of ECC not influenced by NIST or NSA (probably)<sup>8</sup></span></p>
-      <p><span class="footnote" style="font-size: large"><sup>7</sup>GRC https://goo.gl/2R7UgR</span></p>
-      <p><span class="footnote" style="font-size: large"><sup>8</sup>GRC https://goo.gl/2R7UgR</span>
-      <span class="footnote" style="font-size: medium">Uses Dr. Daniel J. Bernstein's (DJB) twisted Edward's curve digital signature algorithm (EdDSA). In published papers, DJB, explains the detailed derivation and properties of his “25519” elliptic curve.</p>
-    </div>
-    <div id="" class="step" data-x="3500" data-y="2100" data-rotate="180" data-rotate-y="90" data-scale="6">
-      <p>Other interesting concepts:</p>
-      <p><span style= "font-size: x-large">BCrypt (blowfish cipher) Key Derivation Function</span></p>
-      <p><span style= "font-size: x-large">SCrypt Password-Based Key Derivation Functions (PBKDF)</span></p>
-      <p><span style= "font-size: x-large"></span></p>
-    </div>
-
-    <!--
-
-        So to summarize of all the possible attributes used to position presentation steps, we have:
-
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
-
-        These values are used by impress.js in CSS transformation functions, so for more information consult
-        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-
-    -->
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="13">
     </div>
 
