@@ -409,7 +409,7 @@ a:focus {
     Just make sure you don't blindly copy this approach.
 */
 #source {
-    width: 700px;
+    width: 900px;
     padding-bottom: 300px;
 
     /* Yoda Icon :: Pixel Art from Star Wars http://www.pixeljoint.com/pixelart/1423.htm */
@@ -453,11 +453,11 @@ a:focus {
     -o-transform:      translateZ(40px);
      transform:        translateZ(40px);
 
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
+    -webkit-transition: 0.2s;
+    -moz-transition:    0.2s;
+    -ms-transition:     0.2s;
+    -o-transition:      0.2s;
+    transition:         0.2s;
 }
 
 #its-in-3d .have {
@@ -627,11 +627,11 @@ a:focus {
 
         This way user will not see the hint moving down.
     */
-    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
-    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
-    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
-    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
-    transition:         opacity 1s,         transform 0.5s 1s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.5s 0.3s;
+    -moz-transition:    opacity 0.3s,    -moz-transform 0.5s 0.3s;
+    -ms-transition:     opacity 0.3s,     -ms-transform 0.5s 0.3s;
+    -o-transition:      opacity 0.3s,      -o-transform 0.5s 0.3s;
+    transition:         opacity 0.3s,         transform 0.5s 0.3s;
 }
 
 /*

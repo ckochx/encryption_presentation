@@ -1,91 +1,119 @@
-----
-
-
-:data-y: r5400
-
-This becomes a h1
-=================
-
-And this a h2
--------------
-
-----
-
-:data-rotate: 540
-
-Dealing with Secrets
-====================
-PGP ≠ GPG
----------
-(Although they share a common ancestor)
-
-* PGP- Pretty Good Protection
-* GnuPG is free implementation of the OpenPGP
-* Available on osx and linux as gpg
+:css: css/impress-demo.css
 
 ----
 
 
+Rails to Phoenix
+================
 
-:data-x: r900
-:data-y: r5000
-:data-scale: 0.1
+How Elixir can level-you-up in Rails
+------------------------------------
 
-.. image:: images/ncsa_logo_black.png
+----
 
-Public Key Cryptography
-=======================
-Asymmetric Encryption
----------------------
-The infrastructure that allows secrets to be publicly shared on the web.
-Something encrypted with a public-key (widely distributed) can only* be decrypted with a private-key which is carefully guarded.
+:data-scale: 0.0
 
-  \*caveats apply
+Why not Rails?
+==============
+Fast to Develop
+---------------
+I already know it.
+------------------
+It does so much for me.
+-----------------------
+Sandi Metz just released 99 Bottles of OOP
+------------------------------------------
+
 
 ----
 
 
-.. image:: images/publickey.png
+
+:data-scale: 0.5
+.. :data-x: r900
+.. :data-y: r5000
+.. :data-scale: 0.1
+
+
+
+Why Phoenix?
+============
+
+
+ * Functional (as in Lambda Calculus, not usable, although it is)
+
+ * Fast
+
+ * Asynchronous
+
+ * Explicit
+
+ * Scalable
+
+ * Pleasing Syntax (Similar to Ruby on Rails) - Enjoyable to Write
+
+ * Built to Fail reliably
+
+
 
 ----
 
-:data-x: -5000
-:data-y: 4000
-:data-z: 10000
-:data-scale: 1
 
-Broadcast Encryption
-====================
-Encrypt a file that multiple (trusted) users can decrypt
+:data-scale: 1.0
 
-Using a symmetric-key (think very long passphrase) a file is encrypted with the passphrase and then the passphrase is encrypted with the public keys of the trusted users in the loop.
-
-----
-
-:data-x: -1000
-:data-y: 40
-:data-rotate: -90
-:data-z: 1000
+.. code:: ruby
 
 
-Making this work for NCSA
-=========================
-Components:
------------
+    class Example
+        def self.transform(hash, key, second_arg)
+            h = hash
+            h[key] += second_arg
+            h
+        end
+    end
 
-* Privately hosted git repo
-* GPG encrypted files
-* Dotgpg (gem) to manage GPG and the user list
-* Public key for each dev and server stored in the repo
-* Jenkins task to decrypt the keys on a project deploy.
-* Dotenv (gem) to source a .env file and expose api-keys as environment vars.
+
 
 ----
 
-:data-x: 2000
-:data-y: -500
-:data-rotate: 90
-:data-z: 5000
+:data-scale: 1.5
+
+.. code:: ruby
+
+    class Example
+      def self.transform(hash, key, second_arg) ...  end
+    end
+
+    hash = {foo: "bar"}
+    new_hash = Example.transform(hash, :foo, "second_arg")
+    hash >> {:foo=>"barsecond_arg"}
+    new_hash >> {:foo=>"barsecond_arg"}
+
+
+
+----
+
+:data-scale: 2.0
+
+.. code:: elixir
+
+    defmodule Example do
+        def transform(map, key, second_arg) do
+            Map.update!(map, :foo, fn(x) -> x <> second_arg end)
+        end
+    end
+
+
+
+
+----
+
+:data-scale: 2.5
+
+.. :data-x: 2000
+.. :data-y: -500
+.. :data-rotate: 90
+.. :data-z: 5000
 
 What benefits does this provide?
 ================================
