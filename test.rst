@@ -1,5 +1,7 @@
 :css: css/impress-demo.css
 
+:data-transition-duration: 200
+
 ----
 
 
@@ -9,9 +11,19 @@ Rails to Phoenix
 How Elixir can level-you-up in Rails
 ------------------------------------
 
+
+.. note::
+
+    By Me.
+    Christian Koch
+
+
+
 ----
 
-:data-scale: 0.0
+
+:data-scale: 0.1
+
 
 Why not Rails?
 ==============
@@ -22,7 +34,15 @@ I already know it.
 It does so much for me.
 -----------------------
 Sandi Metz just released 99 Bottles of OOP
-------------------------------------------
+
+
+.. note::
+
+    Rails is great and I enjoy working with it. It is fast to develop and you can deliver functionality quickly. However I don’t love trying to grow Rails apps. It’s usually not native (just adding more Rails servers) It often requires new technology in the hardware stack, redis and a queue agent, or ElasticSearch or etc.
+
+    I know AR, but the more I look into alternatives, the more I see the value in different ways of interacting with the persistence layer.
+
+    Rails doesn’t scale well naturally. You have to bolt other elements onto or into the application stack.
 
 
 ----
@@ -30,29 +50,25 @@ Sandi Metz just released 99 Bottles of OOP
 
 
 :data-scale: 0.5
-.. :data-x: r900
-.. :data-y: r5000
-.. :data-scale: 0.1
-
 
 
 Why Phoenix?
 ============
 
 
- * Functional (as in Lambda Calculus, not usable, although it is)
+- Functional (as in Lambda Calculus, not usable, although it is)
 
- * Fast
+- Fast
 
- * Asynchronous
+- Asynchronous
 
- * Explicit
+- Explicit
 
- * Scalable
+- Scalable
 
- * Pleasing Syntax (Similar to Ruby on Rails) - Enjoyable to Write
+- Pleasing Syntax (Similar to Ruby on Rails) - Enjoyable to Write
 
- * Built to Fail reliably
+- Built to Fail reliably
 
 
 
